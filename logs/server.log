@@ -1,0 +1,27 @@
+INFO:     Will watch for changes in these directories: ['/home/workspace']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [152] using StatReload
+INFO:     Started server process [154]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     172.20.0.1:35532 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:40292 - "GET /api/titles?limit=1 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40298 - "GET /api/titles?limit=12 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40308 - "GET /api/titles?limit=12&genre=Action HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40316 - "GET /api/titles?limit=12&genre=Sci-Fi HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40326 - "GET /api/titles?limit=12&genre=Comedy HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40292 - "GET /api/titles?limit=1 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40298 - "GET /api/titles?limit=12 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40308 - "GET /api/titles?limit=12&genre=Action HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40316 - "GET /api/titles?limit=12&genre=Sci-Fi HTTP/1.1" 200 OK
+INFO:     172.20.0.1:40328 - "GET /api/titles?limit=12&genre=Comedy HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42978 - "GET /api/titles?limit=1 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42992 - "GET /api/titles?limit=12 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42996 - "GET /api/titles?limit=12&genre=Action HTTP/1.1" 200 OK
+INFO:     172.20.0.1:43006 - "GET /api/titles?limit=12&genre=Sci-Fi HTTP/1.1" 200 OK
+INFO:     172.20.0.1:43008 - "GET /api/titles?limit=12&genre=Comedy HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42978 - "GET /api/titles?limit=1 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42992 - "GET /api/titles?limit=12 HTTP/1.1" 200 OK
+INFO:     172.20.0.1:42996 - "GET /api/titles?limit=12&genre=Action HTTP/1.1" 200 OK
+INFO:     172.20.0.1:43006 - "GET /api/titles?limit=12&genre=Sci-Fi HTTP/1.1" 200 OK
+INFO:     172.20.0.1:43008 - "GET /api/titles?limit=12&genre=Comedy HTTP/1.1" 200 OK

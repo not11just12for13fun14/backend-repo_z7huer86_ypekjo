@@ -12,7 +12,7 @@ Model name is converted to lowercase for the collection name:
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 
 # Example schemas (replace with your own):
 
@@ -38,11 +38,20 @@ class Product(BaseModel):
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
 
-# Add your own schemas here:
-# --------------------------------------------------
+# Netflix-style content schemas
 
-# Note: The Flames database viewer will automatically:
-# 1. Read these schemas from GET /schema endpoint
-# 2. Use them for document validation when creating/editing
-# 3. Handle all database operations (CRUD) directly
-# 4. You don't need to create any database endpoints!
+class Title(BaseModel):
+    """
+    Streaming title (movie or show)
+    Collection name: "title"
+    """
+    name: str = Field(..., description="Display title")
+    type: str = Field(..., description="movie or series")
+    year: Optional[int] = Field(None, description="Release year")
+    rating: Optional[float] = Field(None, ge=0, le=10, description="Average rating 0-10")
+    genres: List[str] = Field(default_factory=list, description="List of genres")
+    description: Optional[str] = Field(None, description="Short synopsis")
+    poster_url: Optional[str] = Field(None, description="Poster image URL")
+    backdrop_url: Optional[str] = Field(None, description="Backdrop/hero image URL")
+    thumb_url: Optional[str] = Field(None, description="Thumbnail for rows")
+    mature: bool = Field(default=False, description="Maturity flag")
